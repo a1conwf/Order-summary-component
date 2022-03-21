@@ -1,0 +1,192 @@
+@import "./globals";
+@import "./variables";
+
+//Card
+.card {
+    width: 450px;
+    background-color: #fff;
+    border-radius: 2rem;
+
+    &__img {
+        width: 100%;
+        height: 220px;
+        background-image: url("../images/illustration-hero.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 2rem 2rem 0 0;
+    }
+
+    //Card Info
+    &__info {
+        padding: 4.5rem 4.8rem 4.8rem;
+        text-align: center;
+
+        h1 {
+            font-size: 2.8rem;
+            line-height: 3.7rem;
+        }
+
+        p {
+            margin-top: 1.7rem;
+            line-height: 2.6rem;
+        }
+
+        //Card Pricing
+        .card__pricing {
+            position: relative;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            margin-top: 2rem;
+            padding: 2.5rem 2.4rem;
+            background-color: #F7F9FF;
+            border-radius: 1.2rem;
+
+            img {
+                width: 48px;
+                height: 48px;
+            }
+
+            //Card Pricing Plan
+            &__plan {
+                margin-left: 2rem;
+
+                h2 {
+                    font-size: 1.6rem;
+                }
+            }
+
+            .change {
+                position: absolute;
+                right: 2.4rem;
+                font-size: 1.4rem;
+                font-weight: 700;
+                color: $brightBlue;
+                text-decoration: underline;
+                cursor: pointer;
+                transition: all 0.2s ease-in;
+
+                &:hover {
+                    text-decoration: none;
+                    color: #766CF1;
+                }
+            }
+        }
+
+        .proceed__payment {
+            margin-top: 4.7rem;
+            width: 100%;
+            border: none;
+            border-radius: 1.1rem;
+            outline: none;
+            padding: 1.5rem 10rem;
+            background-color: $brightBlue;
+            color: #fff;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            font-weight: 700;
+            box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.190291);
+            cursor: pointer;
+            transition: background-color 0.2s ease-in;
+
+            &:hover {
+                background-color: #766CF1;
+            }
+        }
+
+        .cancel__order {
+            margin-top: 3.2rem;
+            font-size: 1.5rem;
+            font-weight: 900;
+            cursor: pointer;
+            transition: color 0.2s ease-in;
+
+            &:hover {
+                color: $darkBlue;
+            }
+        }
+    }
+}
+
+.attribution {
+    margin-top: 2rem;
+}
+
+//Media Queries
+
+@media screen and (max-width: 768px) {
+    body {
+        background-size: 0%;
+    }
+
+    .card {
+        width: 327px;
+
+        &__img {
+            height: 160px;
+        }
+
+        //Card Info
+        &__info {
+            padding: 3.2rem 2.4rem;
+
+            h1 {
+                font-size: 2.2rem;
+                line-height: 2.9rem;
+            }
+
+            p {
+                font-size: 1.5rem;
+                margin-top: 1.6rem;
+                line-height: 2.5rem;
+            }
+        }
+
+        //Card Pricing
+        .card__pricing {
+            margin-top: 2.4rem;
+
+            //Card Pricing Plan
+            &__plan {
+
+                h2,
+                span {
+                    font-size: 1.4rem;
+                }
+            }
+
+            .change {
+                right: 1.6rem;
+            }
+        }
+
+        .proceed__payment {
+            margin-top: 2.4rem;
+            padding: 1.5rem 6.4rem;
+        }
+
+        .cancel__order {
+            margin-top: 2.4rem;
+        }
+    }
+
+    .attribution {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .card {
+        width: 300px;
+
+        &__img {
+            width: 300px;
+        }
+
+        .proceed__payment {
+            width: 100%;
+            font-size: 1.2rem;
+        }
+
+    }
+}
